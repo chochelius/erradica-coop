@@ -7,7 +7,7 @@ function Footer() {
                 <nav className="navbar bg-body-tertiary fixed-bottom">
                     <div className="container-fluid">
                         <a className="navbar-brand" href="_blank">Footer</a>
-                        <button type="button" class="btn btn-outline-success btn-sm">Contáctanos</button>
+                        <button type="button" className="btn btn-outline-success btn-sm">Contáctanos</button>
 
                     </div>
                 </nav>

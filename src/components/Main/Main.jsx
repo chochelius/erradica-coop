@@ -1,16 +1,19 @@
-import React from 'react'
+import React, { Suspense } from 'react'
+import PostCard from '../PostCard'
+import getResultList from '../../api/Api'
+
 
 function Main() {
+    let posts = getResultList
+    console.log(posts.length)
+
     return (
         <>
-            <div className="row">
-                <div className="col-4 px-1">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil ratione at cum accusantium beatae doloremque debitis in fugiat?
-                </div>
-                <div className="col-8 px-5">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim repellendus dolores quidem, provident quisquam sint asperiores omnis doloribus minus deserunt veritatis laboriosam vitae aut consectetur debitis. Obcaecati tempora reprehenderit animi soluta vitae id eos iure a non veniam est possimus commodi praesentium assumenda culpa quia modi dolorem,
-                </div>
-            </div>
+            <Suspense fallback={<div>Loading...</div>}>
+
+                <PostCard title="title" content="content" imgurl="https://picsum.photos/200" user="user" likes="likes" created="today" updated="today" />
+
+            </Suspense>
         </>
 
     )
