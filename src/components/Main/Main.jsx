@@ -4,8 +4,7 @@ import getResultList from '../../api/Api'
 
 
 function Main() {
-    let posts = getResultList
-    console.log(posts.length)
+    const results = getResultList();
 
     return (
         <>
