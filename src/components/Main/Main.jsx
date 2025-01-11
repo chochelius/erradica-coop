@@ -1,21 +1,40 @@
-import React, { Suspense } from 'react'
-import PostCard from '../PostCard'
-import getResultList from '../../api/Api'
+import fetchAllPosts from "../../api/Api";
+import PostCard from "../PostCard"
+import { useEffect, useState } from "react";
+
 
 
 function Main() {
-    const results = getResultList();
 
-    return (
-        <>
-            <Suspense fallback={<div>Loading...</div>}>
+  const [results, setResults] = useState([]);
 
-                <PostCard title="title" content="content" imgurl="https://picsum.photos/200" user="user" likes="likes" created="today" updated="today" />
+  useEffect(() => {
+    fetchAllPosts().then((data) => {
+      setResults(data);
+    });
+  }, []);
 
-            </Suspense>
-        </>
+  console.log(results);
 
-    )
-}
 
-export default Main
+  return (
+    <div>
+      {results.map((post) => (
+        <PostCard
+          key={post.id} // Assign a unique key for each PostCard
+          title={post.title}
+          content={post.content}
+          imgurl={post.imgurl}
+          created={post.created}
+          updated={post.updated}
+          user={post.user}
+          likes={post.likes}
+        />
+      ))}
+
+
+    </div>
+  )
+};
+
+export default Main;

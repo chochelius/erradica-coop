@@ -1,15 +1,16 @@
 import PocketBase from 'pocketbase';
-import { cache } from 'react';
 
-const pb = new PocketBase('https://pbe.choche.bond/');
 
-const getResultList = async () => {
-         await pb.collection('posts').getFullList();
-        const resultList = await pb.collection('posts').getFullList();
-        console.log('Result List:', resultList)
-        return resultList;
-    
+const pb = new PocketBase('https://pbe.choche.bond');
+
+const fetchAllPosts = () => {
+  try {
+    const data = pb.collection('posts').getFullList();
+    return data;
+  } catch (error) {
+    console.error('Error fetching posts:', error);
+    return [];
+  }
 };
 
-
-export default getResultList;
+export default fetchAllPosts;
