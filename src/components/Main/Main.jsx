@@ -7,14 +7,27 @@ import { useEffect, useState } from "react";
 function Main() {
 
   const [results, setResults] = useState([]);
+  const [showNoPostsMessage, setShowNoPostsMessage] = useState(false);
 
   useEffect(() => {
     fetchAllPosts().then((data) => {
       setResults(data);
+
+      if (data.length === 0) {
+        setTimeout(() => {
+          setShowNoPostsMessage(true);
+        }, 1000);
+      } else {
+        setShowNoPostsMessage(false);
+      }
     });
   }, []);
 
-  console.log(results);
+
+ 
+
+  // if results.length is equal to 0 then render on span id="ifNone" <div>No hay entradas en este blog</div>
+
 
 
   return (
@@ -30,11 +43,15 @@ function Main() {
           user={post.user}
           likes={post.likes}
         />
+
       ))}
-
-
+        
+      <span id="ifNone">
+        {showNoPostsMessage && <div>No hay entradas en este blog</div>}
+      </span>
+      
     </div>
   )
 };
 
-export default Main;
+export default Main

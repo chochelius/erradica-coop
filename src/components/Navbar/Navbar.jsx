@@ -1,11 +1,11 @@
-import React from 'react'
+
 
 function Navbar() {
   return (
     <div>
       <nav className="navbar bg-body-tertiary fixed-top">
         <div className="container-fluid">
-          <a className="navbar-brand" href="_blank">[LOGO] Erradica Cooperativa</a>
+          <a className="navbar-brand" href="_blank"><img src="https://pbe.choche.bond/api/files/pbc_3607937828/qz5q4u6cn5h4930/untitled_project_1_82jbmbdisk.png?token=" alt="" style={{ width: '20vh' }} /> </a>
           <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -36,9 +36,14 @@ function Navbar() {
                   </ul>
                 </li>
               </ul>
-              <form className="d-flex mt-3" role="search">
-                <input className="form-control me-2" type="search" placeholder="Búsqueda" aria-label="Search" />
+              <form className="d-flex mt-3 mb-5" role="search">
+                <input className="form-control me-2 " type="search" placeholder="Búsqueda" aria-label="Search" />
                 <button className="btn btn-outline-success" type="submit">Buscar</button>
+              </form>
+              <br />
+              <form className="d-grid gap-2 col-6 mx-auto mt-5" role="login">
+                <button className="btn btn-wide btn-outline-success" type="submit">Ingreso para colaboradores</button>
+
               </form>
             </div>
           </div>
