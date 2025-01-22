@@ -24,14 +24,14 @@ function Main() {
   }, []);
 
 
- 
+
 
   // if results.length is equal to 0 then render on span id="ifNone" <div>No hay entradas en este blog</div>
 
 
 
   return (
-    <div>
+    <div className="pt-3">
       {results.map((post) => (
         <PostCard
           key={post.id} // Assign a unique key for each PostCard
@@ -45,11 +45,11 @@ function Main() {
         />
 
       ))}
-        
+
       <span id="ifNone">
         {showNoPostsMessage && <div>No hay entradas en este blog</div>}
       </span>
-      
+
     </div>
   )
 };

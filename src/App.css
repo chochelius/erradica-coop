@@ -1,4 +1,12 @@
+
+
 #root {
+  --rich-black: #071724;
+  --violet: #50243D;
+  --cordovan: #8D383F;
+  --raw-umber: #8C5E3A;
+  --persian-orange: #CB8D5A;
+  
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
