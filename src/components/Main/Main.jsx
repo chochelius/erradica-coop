@@ -31,7 +31,7 @@ function Main() {
 
 
   return (
-    <div className="pt-3">
+    <div className="mt-5">
       {results.map((post) => (
         <PostCard
           key={post.id} // Assign a unique key for each PostCard
@@ -42,6 +42,7 @@ function Main() {
           updated={post.updated}
           user={post.user}
           likes={post.likes}
+          className="mt-5"
         />
 
       ))}
