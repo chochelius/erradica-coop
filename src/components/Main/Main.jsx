@@ -1,11 +1,8 @@
 import fetchAllPosts from "../../api/Api";
-import PostCard from "../PostCard"
+import PostCard from "../PostCard";
 import { useEffect, useState } from "react";
 
-
-
 function Main() {
-
   const [results, setResults] = useState([]);
   const [showNoPostsMessage, setShowNoPostsMessage] = useState(false);
 
@@ -23,12 +20,7 @@ function Main() {
     });
   }, []);
 
-
-
-
   // if results.length is equal to 0 then render on span id="ifNone" <div>No hay entradas en este blog</div>
-
-
 
   return (
     <div className="mt-5">
@@ -44,15 +36,13 @@ function Main() {
           likes={post.likes}
           className="mt-5"
         />
-
       ))}
 
       <span id="ifNone">
         {showNoPostsMessage && <div>No hay entradas en este blog</div>}
       </span>
-
     </div>
-  )
-};
+  );
+}
 
-export default Main
+export default Main;
