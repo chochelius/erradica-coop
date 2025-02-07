@@ -5,7 +5,7 @@ function Navbar() {
     <div >
       <nav className="navbar bg-body-tertiary fixed-top">
         <div className="container-fluid">
-          <a className="navbar-brand" href="_blank"><img src="https://pbe.choche.bond/api/files/pbc_3607937828/qz5q4u6cn5h4930/untitled_project_1_82jbmbdisk.png?token=" alt="" style={{ width: '20vh' }} /> </a>
+          <a className="navbar-brand" href="_blank"><img src="https://pbe.choche.bond/api/files/pbc_3607937828/i85z6tb8lrg48vz/untitled_project_8_1gn72upmug.png?token=" alt="" style={{ width: '7vh' }} /> Erradica Cooperativa de trabajo</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -36,7 +36,7 @@ function Navbar() {
                   </ul>
                 </li>
               </ul>
-              <form className="d-flex mt-3 mb-5" role="search">
+              <form className="d-flex mt-3 " role="search">
                 <input className="form-control me-2 " type="search" placeholder="Búsqueda" aria-label="Search" />
                 <button className="btn btn-outline-success" type="submit">Buscar</button>
               </form>
