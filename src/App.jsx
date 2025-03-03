@@ -1,26 +1,25 @@
-import { Suspense, lazy } from "react"; // Import startTransition
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import { BrowserRouter } from "react-router-dom";
+import { Suspense, lazy } from "react";
 
-const AppRouter = lazy(() => {
+const LazyRouter = lazy(() => {
   //random delay time from 200 to 2000 ms
   const delay = Math.floor(Math.random() * 1800) + 200;
-  return delayForDemo(delay).then(() => import("./router/reactRouter"));
-
-}
-);
+  return delayForDemo(delay).then(() => import("./components/Main/Inicio"));
+});
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <BrowserRouter>
-        <Suspense fallback={BigSpinner()}>
-          <AppRouter />
-        </Suspense>
-      </BrowserRouter>
+      <Suspense fallback={BigSpinner()}>
+        <BrowserRouter>
+          <LazyRouter />
+
+        </BrowserRouter>
+      </Suspense>
       <Footer />
     </div>
   );
