@@ -1,4 +1,5 @@
 import { createPopper } from '@popperjs/core';
+import { Link } from 'react-router-dom'
 
 
 
@@ -16,14 +17,14 @@ function Navbar() {
     <div >
       <nav className="navbar fixed-top" style={{ backgroundColor: "#CB8D5A", opacity: "0.9" }} >
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
-            <img
+          <Link to="/" className="navbar-brand"> 
+                      <img
               src="https://pocketbase.erradica.cl/api/files/pbc_3607937828/i85z6tb8lrg48vz/untitled_project_8_1gn72upmug.png?token="
               alt=""
               style={{ width: "7vh" }}
             />{" "}
             Erradica Cooperativa de trabajo
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -55,32 +56,30 @@ function Navbar() {
             <div className="offcanvas-body">
               <ul className="navbar-nav justify-content-end flex-grow-1">
                 <li className="nav-item">
-                  <a
-                    className="nav-link active"
-                    aria-current="page"
-                    href="/"
-                  >
+                  <Link to="/" className="nav-link active" aria-current="page">
                     Inicio
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/about">
-                    Sobre Nosotras                  </a>
+                  <Link to="/quienes" className="nav-link">
+                    Sobre Nosotras
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/blog">
+                  <Link to="/blog" className="nav-link">
                     Blog
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/contact">
+                  <Link to="/contact" className="nav-link">
                     Contáctanos
-                  </a>
+                  </Link>
                 </li>
+
                 <li className="nav-item">
-                  <a className="nav-link" href="/socias">
+                  <Link to ="/socias" className="nav-link">
                     Socias fundadoras
-                  </a>
+                  </Link>
                 </li>
 
               </ul>
