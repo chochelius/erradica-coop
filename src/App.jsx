@@ -1,24 +1,28 @@
-import { Suspense, lazy } from "react"; // Combine imports
+import { Suspense, lazy } from "react"; // Import startTransition
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import { BrowserRouter } from "react-router-dom";
 
-const Main = lazy(() => {
-  // No need for delayForDemo in production
-  return delayForDemo(1500).then(() => import("./components/Main/Main"));
-});
+const AppRouter = lazy(() => {
+  //random delay time from 200 to 2000 ms
+  const delay = Math.floor(Math.random() * 1800) + 200;
+  return delayForDemo(delay).then(() => import("./router/reactRouter"));
+
+}
+);
 
 function App() {
   return (
-    <>
+    <div className="App">
       <Navbar />
-      <Suspense fallback={BigSpinner()}>
-        {" "}
-        {/* Use component directly */}
-        <Main />
-      </Suspense>
+      <BrowserRouter>
+        <Suspense fallback={BigSpinner()}>
+          <AppRouter />
+        </Suspense>
+      </BrowserRouter>
       <Footer />
-    </>
+    </div>
   );
 }
 
@@ -28,7 +32,8 @@ function BigSpinner() {
       <img
         src="https://pbe.choche.bond/api/files/pbc_3607937828/i85z6tb8lrg48vz/untitled_project_8_1gn72upmug.png?token="
         alt=""
-        style={{ width: "7vh" }}
+        className="erradica-logo"
+        style={{ width: "7vh", marginTop: "35vh" }}
       />{" "}
       <h2> Cargando...</h2>
     </div>

@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 #root {
   --rich-black: #071724;
@@ -6,11 +6,11 @@
   --cordovan: #8D383F;
   --raw-umber: #8C5E3A;
   --persian-orange: #CB8D5A;
-  
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  --light-background: #D8A882; 
   text-align: center;
+  background-color: var(--violet);
+  color: #071724;
+  font-family: 'Roboto', sans-serif;
 }
 
 .logo {
@@ -44,6 +44,9 @@
 .card {
   padding: 2em;
   background-color: white;
+  border-radius: 1em;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+  margin: 1em;
 }
 
 .read-the-docs {
@@ -54,4 +57,35 @@
   font-family: 'Roboto', sans-serif;
   color: var(--rich-black);
   background-color: var(--violet) !important;
+}
+
+.App {
+  text-align: center;
+  background-color: var(--light-background);
+  
+  z-index: 0;
+ 
+}
+
+.erradica-logo {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  transform: scale(1);
+  animation: pulse 500ms infinite;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
 }

@@ -2,7 +2,7 @@ import fetchAllPosts from "../../api/Api";
 import PostCard from "../PostCard";
 import { useEffect, useState } from "react";
 
-function Main() {
+function Blog() {
   const [results, setResults] = useState([]);
   const [showNoPostsMessage, setShowNoPostsMessage] = useState(false);
 
@@ -45,4 +45,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Blog;

@@ -1,9 +1,22 @@
+import { createPopper } from '@popperjs/core';
+
+
+
 function Navbar() {
+
+  const button = document.querySelector('#button');
+  const tooltip = document.querySelector('#tooltip');
+
+  createPopper(button, tooltip, {
+    placement: 'bottom',
+  });
+
+
   return (
-    <div>
-      <nav className="navbar bg-body-tertiary fixed-top">
+    <div >
+      <nav className="navbar fixed-top" style={{ backgroundColor: "#CB8D5A", opacity: "0.9" }} >
         <div className="container-fluid">
-          <a className="navbar-brand" href="_blank">
+          <a className="navbar-brand" href="/">
             <img
               src="https://pbe.choche.bond/api/files/pbc_3607937828/i85z6tb8lrg48vz/untitled_project_8_1gn72upmug.png?token="
               alt=""
@@ -19,13 +32,14 @@ function Navbar() {
             aria-controls="offcanvasNavbar"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"><a data-bs-toggle="tooltip" data-bs-title="Default tooltip"></a></span>
           </button>
           <div
             className="offcanvas offcanvas-end"
             tabIndex="-1"
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
+            style={{ backgroundColor: "#CB8D5A", opacity: "0.9" }}
           >
             <div className="offcanvas-header">
               <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
@@ -44,47 +58,31 @@ function Navbar() {
                   <a
                     className="nav-link active"
                     aria-current="page"
-                    href="_blank"
+                    href="/"
                   >
                     Inicio
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="_blank">
-                    Quiénes somos
+                  <a className="nav-link" href="/about">
+                    Sobre Nosotras                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/blog">
+                    Blog
                   </a>
                 </li>
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="_blank"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
+                <li className="nav-item">
+                  <a className="nav-link" href="/contact">
                     Contáctanos
                   </a>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a className="dropdown-item" href="_blank">
-                        Opción de contacto 1
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="_blank">
-                        Opción de contacto 2
-                      </a>
-                    </li>
-                    <li>
-                      <hr className="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="_blank">
-                        Opción de contacto 3
-                      </a>
-                    </li>
-                  </ul>
                 </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/socias">
+                    Socias fundadoras
+                  </a>
+                </li>
+
               </ul>
               <form className="d-flex mt-3 " role="search">
                 <input
@@ -93,14 +91,16 @@ function Navbar() {
                   placeholder="Búsqueda"
                   aria-label="Search"
                 />
-                <button className="btn btn-outline-success" type="submit">
-                  Buscar
-                </button>
+                <a href="/" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Busqueda desactivada">
+
+                  <button type="button" className="btn btn-outline-dark" disabled>
+                    Buscar
+                  </button></a>
               </form>
               <br />
               <form className="d-grid gap-2 col-6 mx-auto mt-5" role="login">
                 <button
-                  className="btn btn-wide btn-outline-success"
+                  className="btn btn-wide btn-outline-dark"
                   type="submit"
                 >
                   Ingreso para colaboradores
