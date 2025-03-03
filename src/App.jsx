@@ -1,44 +1,35 @@
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import { BrowserRouter } from "react-router-dom";
-import { Suspense, lazy } from "react";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import Socias from "./components/Main/Socias";
+import Contact from "./components/Main/Contact";
+import Quienes from "./components/Main/Quienes";
+import Blog from "./components/Main/Blog";
+import Inicio from "./components/Main/Inicio";
 
-const LazyRouter = lazy(() => {
-  //random delay time from 200 to 2000 ms
-  const delay = Math.floor(Math.random() * 1800) + 200;
-  return delayForDemo(delay).then(() => import("./components/Main/Inicio"));
-});
+
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Suspense fallback={BigSpinner()}>
-        <BrowserRouter>
-          <LazyRouter />
+      <Router>
 
-        </BrowserRouter>
-      </Suspense>
-      <Footer />
+        <Navbar />
+        <Routes>
+          <Route exact path="/" element={<Inicio />} />
+          <Route exact path="/quienes" element={<Quienes />} />
+          <Route exact path="/blog" element={<Blog />} />
+          <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/socias" element={<Socias />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+        <Footer />
+
+      </Router>
     </div>
   );
 }
 
-function BigSpinner() {
-  return (
-    <div>
-      <img
-        src="https://pocketbase.erradica.cl/api/files/pbc_3607937828/i85z6tb8lrg48vz/untitled_project_8_1gn72upmug.png?token="
-        alt=""
-        className="erradica-logo"
-        style={{ width: "7vh", marginTop: "35vh" }}
-      />{" "}
-      <h2> Cargando...</h2>
-    </div>
-  );
-}
-
-const delayForDemo = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export default App;
