@@ -3,7 +3,7 @@
 
 function PostCard(props) {
     return (
-        <div className="flex-container d-flex justify-content-center" style={{ height: "30vh" }}>
+        <div className="flex-container d-flex justify-content-center" style={{ height: "40vh" }}>
             <div className="card mb-3"  >
                 <div className="row g-0">
                     <div className="col-4">

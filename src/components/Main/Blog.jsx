@@ -31,6 +31,7 @@ function Blog() {
           content={post.content}
           imgurl={post.imgurl}
           className="mt-5"
+          style={{ height: "15vh" }}
         />
       ))}
 
