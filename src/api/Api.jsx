@@ -1,7 +1,7 @@
 import PocketBase from 'pocketbase';
 
 
-const pb = new PocketBase('https://pbe.choche.bond');
+const pb = new PocketBase('https://pocketbase.erradica.cl');
 
 const fetchAllPosts = () => {
   try {

@@ -11,21 +11,21 @@ function Socias() {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src="https://pbe.choche.bond/api/files/pbc_3607937828/jrv7694ucn90lh8/1738309717102_2rf6eadttw.JPG?token=" className="d-block w-50 mx-auto" alt="..." />
+            <img src="https://pocketbase.erradica.cl/api/files/pbc_3607937828/jrv7694ucn90lh8/1738309717102_2rf6eadttw.JPG?token=" className="d-block w-50 mx-auto" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h5>Paulina Rebolledo</h5>
               <p>Representante legal y Abogada</p>
             </div>
           </div>
           <div className="carousel-item">
-            <img src="https://pbe.choche.bond/api/files/pbc_3607937828/43x6b05f8m95548/1738309710406_jk0hw0rriq.JPG?token=" className="d-block w-50 mx-auto" alt="..." />
+            <img src="https://pocketbase.erradica.cl/api/files/pbc_3607937828/43x6b05f8m95548/1738309710406_jk0hw0rriq.JPG?token=" className="d-block w-50 mx-auto" alt="..." />
             <div className="carousel-caption d-none d-md-block ">
               <h5>Consuelo Zarzar</h5>
               <p>Trabajadora Social</p>
             </div>
           </div>
           <div className="carousel-item">
-            <img src="https://pbe.choche.bond/api/files/pbc_3607937828/c070t3w6iwje3p8/1738309723528_r5zy3g8pdb.JPG?token=" className="d-block w-50 mx-auto" alt="..." />
+            <img src="https://pocketbase.erradica.cl/api/files/pbc_3607937828/c070t3w6iwje3p8/1738309723528_r5zy3g8pdb.JPG?token=" className="d-block w-50 mx-auto" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h5>Giannina Jaramillo</h5>
               <p>Cientista político</p>

@@ -23,17 +23,13 @@ function Blog() {
   // if results.length is equal to 0 then render on span id="ifNone" <div>No hay entradas en este blog</div>
 
   return (
-    <div className="mt-5">
+    <div className="mt-5 pt-5">
       {results.map((post) => (
         <PostCard
           key={post.id} // Assign a unique key for each PostCard
           title={post.title}
           content={post.content}
           imgurl={post.imgurl}
-          created={post.created}
-          updated={post.updated}
-          user={post.user}
-          likes={post.likes}
           className="mt-5"
         />
       ))}

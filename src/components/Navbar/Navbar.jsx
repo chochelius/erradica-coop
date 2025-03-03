@@ -18,7 +18,7 @@ function Navbar() {
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
             <img
-              src="https://pbe.choche.bond/api/files/pbc_3607937828/i85z6tb8lrg48vz/untitled_project_8_1gn72upmug.png?token="
+              src="https://pocketbase.erradica.cl/api/files/pbc_3607937828/i85z6tb8lrg48vz/untitled_project_8_1gn72upmug.png?token="
               alt=""
               style={{ width: "7vh" }}
             />{" "}
@@ -98,14 +98,14 @@ function Navbar() {
                   </button></a>
               </form>
               <br />
-              <form className="d-grid gap-2 col-6 mx-auto mt-5" role="login">
+              <a className="d-grid gap-2 col-6 mx-auto mt-5" href='http://login.erradica.cl' role="login">
                 <button
                   className="btn btn-wide btn-outline-dark"
                   type="submit"
                 >
                   Ingreso para colaboradores
                 </button>
-              </form>
+              </a>
             </div>
           </div>
         </div>

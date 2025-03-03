@@ -30,7 +30,7 @@ function BigSpinner() {
   return (
     <div>
       <img
-        src="https://pbe.choche.bond/api/files/pbc_3607937828/i85z6tb8lrg48vz/untitled_project_8_1gn72upmug.png?token="
+        src="https://pocketbase.erradica.cl/api/files/pbc_3607937828/i85z6tb8lrg48vz/untitled_project_8_1gn72upmug.png?token="
         alt=""
         className="erradica-logo"
         style={{ width: "7vh", marginTop: "35vh" }}
