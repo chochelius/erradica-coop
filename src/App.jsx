@@ -38,7 +38,7 @@ function App() {
           <Socias />
           <Blog />
         </div>
-        <div className="d-sm-block d-xl-block" style={{ position: "fixed", bottom: "10vh", left: "80vw", zIndex: "1000",  }}>
+        <div className="d-sm-block d-xl-block" style={{ position: "fixed", bottom: "12.5vh", left: "80vw", zIndex: "1000",  }}>
           
         <Whatsapp />
         </div>
