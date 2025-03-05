@@ -1,7 +1,7 @@
 
 function Quienes() {
   return (
-    <div className="container" style={{ paddingTop: "12vh", paddingBottom: "30vh" }}>
+    <div className="container">
       <p className="fw-bold fs-2 pt-1"> ¿Quiénes sómos?</p>
       <p className="fs-6">
         Somos una cooperativa constituida fundamentalmente por un grupo de mujeres profesionales y en proceso de titulación con un profundo sentido de la igualdad y equidad social, que tiene como misión desarrollar acompañamientos de carácter multidisciplinario a personas que se encuentran en situación de vulnerabilidad social y requieran de apoyo jurídico y psicosocial.

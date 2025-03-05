@@ -17,14 +17,17 @@ function Navbar() {
     <div >
       <nav className="navbar fixed-top" style={{ backgroundColor: "#CB8D5A", opacity: "0.9" }} >
         <div className="container-fluid">
-          <Link to="/" className="navbar-brand"> 
+<div className='d-inline'>
+<Link to="/" className="navbar-brand"> 
                       <img
               src="https://pocketbase.erradica.cl/api/files/pbc_3607937828/i85z6tb8lrg48vz/untitled_project_8_1gn72upmug.png?token="
               alt=""
               style={{ width: "7vh" }}
             />{" "}
-            Erradica Cooperativa de trabajo
+            <p className='d-inline d-none d-sm-inline'>ERRADICA</p>
+            <p className='d-inline d-none d-md-inline'>ERRADICA COOPERATIVA DE TRABAJO</p>
           </Link>
+</div>
           <button
             className="navbar-toggler"
             type="button"

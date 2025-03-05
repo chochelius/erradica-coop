@@ -13,5 +13,9 @@ export default defineConfig({
   },
   server: {
     historyApiFallback: true,
+    // redirect all 404s to index.html
+    proxy: {
+      '/api': 'http://localhost:3000',
+    },
   },
 })
