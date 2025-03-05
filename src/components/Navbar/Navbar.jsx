@@ -29,7 +29,7 @@ function Navbar() {
           </Link>
 </div>
           <button
-            className="navbar-toggler"
+            className="navbar-toggler d-inline d-none d-md-inline"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasNavbar"
