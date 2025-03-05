@@ -8,7 +8,10 @@ function Contact() {
       </p>
 
       <p className="fs-6">
-        <a href="https://api.whatsapp.com/send?phone=56923992455" className="text-dark">
+        <a
+          href="https://api.whatsapp.com/send?phone=56923992455"
+          className="text-dark"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="45"
