@@ -4,10 +4,10 @@ function Footer() {
   return (
     <>
       <div>
-        <nav className="navbar  fixed-bottom" style={{ height: "75px", backgroundColor: "#CB8D5A", opacity: "0.9", zIndex: "1" }}>
+        <nav className="navbar  fixed-bottom" style={{ height: "12.5vh", backgroundColor: "#CB8D5A", opacity: "0.9", zIndex: "1" }}>
           <div className="container-fluid">
             <a className="navbar-brand" href="mailto:chochelius@gmail.com">
-              <p className="pt-3" style={{fontSize:'15px', color:'black'}}> ©️ 2024-2025 JClabs</p>
+              <p className="pt-3" style={{fontSize:'10px', color:'black'}}> ©️ 2024-2025 JClabs</p>
             </a>
 
             <span className="ms-auto me-4">

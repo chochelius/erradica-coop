@@ -24,8 +24,8 @@ function Navbar() {
               alt=""
               style={{ width: "7vh" }}
             />{" "}
-            <p className='d-inline d-none d-sm-inline'>ERRADICA</p>
-            <p className='d-inline d-none d-md-inline'>ERRADICA COOPERATIVA DE TRABAJO</p>
+            ERRADICA
+            <p className='d-inline d-none d-md-inline'> COOPERATIVA DE TRABAJO</p>
           </Link>
 </div>
           <button
